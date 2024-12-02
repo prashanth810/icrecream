@@ -1,5 +1,4 @@
 const express = require("express");
-const Payment = require("../controllers/Paymentcontroller");
 const Razorpay = require("razorpay");
 
 require("dotenv").config();

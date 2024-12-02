@@ -15,8 +15,6 @@ const port = process.env.PORT || 8020;
 app.use(express.json());
 app.use(cors());
 
-// database connection 
-connectDB();
 
 // user router end point 
 app.use("/api/user", userRouter);
@@ -38,6 +36,11 @@ app.get("/", (req, res) => {
     res.send("ice - cream")
 })
 
-app.listen(port, (req, res) => {
-    console.log('ice cream connected !!');
+
+// database connection 
+connectDB().then(() => {
+    app.listen(port, (req, res) => {
+        console.log('ice cream connected !!');
+    })
 })
+
