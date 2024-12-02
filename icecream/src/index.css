@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Outfit:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  @apply text-xl font-bold duration-300;
+}
+
+.head_home .subheading {
+  font-family: kalnia;
+}
+
+.nav-link:hover,
+.active {
+  @apply text-firstcolor;
+}
+
+html {
+  @apply bg-yellow-100;
+}
+
+body {
+  @apply bg-white tracking-wider max-w-[1920px];
+}
+
+.head_home .promo_section {
+  background-image: url("./assets/promo_bg.jpg");
+  background-size: cover;
+}
+
+.flavir_item img {
+  @apply duration-700;
+}
+
+.flavir_item:hover img {
+  @apply scale-110;
+}
+
+.fadein {
+  animation: fadein 1.2s linear;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadein2 {
+  animation: fadein 2s linear;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* cartdata list of items  */
+
+.cartData_items_list .cartData_items {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.cartData_items_list .cartData_items ::-webkit-scrollbar {
+  display: none;
+}
+
+.textshadow {
+  filter: drop-shadow(0px 0px 10px red);
+  cursor: pointer;
+}
+
+/* contact animation  */
+.loader {
+  width: 40px;
+  height: 40px;
+  border-width: 5px;
+  border-top-color: green;
+  border-radius: 50%;
+  animation: 2s spin linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.singleproduct_home {
+  background-color: #0b0815;
+}
+
+.underline-animation {
+  position: absolute;
+  width: 100%;
+  bottom: -1px;
+  height: 2px;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+.underline,
+.spacer-left,
+.spacer-right {
+  height: 100%;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+}
+
+.spacer-left {
+  animation-name: grow-one;
+  background-color: transparent;
+}
+
+.underline {
+  animation-name: grow-two;
+  background-color: black;
+}
+
+.spacer-right {
+  animation-name: grow-three;
+  background-color: transparent;
+}
+
+.with-pseudo {
+  &::before,
+  &::after {
+    background-color: transparent;
+    content: "";
+    height: 100%;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+  }
+
+  &::before {
+    animation-name: grow-one;
+  }
+
+  &::after {
+    animation-name: grow-three;
+  }
+}
+
+@keyframes grow-one {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes grow-two {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes grow-three {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+.backimg {
+  background-image: url("https://t4.ftcdn.net/jpg/03/00/82/59/360_F_300825957_i6Mxq8ifNzJbfGN9t1YXGXCCdhLzUJm2.jpg");
+  background-size: cover;
+}

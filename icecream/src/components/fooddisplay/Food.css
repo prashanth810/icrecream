@@ -1,0 +1,13 @@
+.head_home #shop .listof_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  margin: 20px 0px;
+  overflow-x: scroll;
+}
+
+.head_home #shop .listof_items::-webkit-scrollbar {
+  display: none;
+}
